@@ -139,7 +139,7 @@ call(
 print(f"\n... Haciendo Video MP4, Añadiendo WaveForm - Ondas De Sonido Al Video Y El Propio Sonido ...\n")
 call(
     [
-        "ffm8ax",
+        "ffmpeg",
         "-threads",
         "8",
         "-i",
@@ -155,9 +155,7 @@ call(
         "-c:v",
         "hevc_amf",
         "-c:a",
-        "libfdk_aac",
-        "-profile:a",
-        "aac_he_v2",
+        "aac",
         "-b:a",
         "32k",
         "M8AX-Pi-Temporal.Mp4",
@@ -251,9 +249,7 @@ call(
         "-metadata",
         "title=M8AX - La Música De PI",
         "-c:a",
-        "libfdk_aac",
-        "-profile:a",
-        "aac_he_v2",
+        "aac",
         "-b:a",
         "32k",
         "M8AX-Pi-Decimals.M4a",
